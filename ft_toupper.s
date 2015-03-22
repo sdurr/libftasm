@@ -6,13 +6,13 @@
 ;    By: sdurr <sdurr@student.42.fr>                +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
 ;    Created: 2015/03/21 18:53:29 by sdurr             #+#    #+#              ;
-;    Updated: 2015/03/22 09:26:07 by sdurr            ###   ########.fr        ;
+;    Updated: 2015/03/22 14:17:43 by karakhirn        ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
 
-global _ft_toupper
+global ft_toupper
 
-_ft_toupper:
+ft_toupper:
 	push rbp
 	mov rax, rdi
 	cmp rdi, 90

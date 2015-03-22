@@ -6,7 +6,7 @@
 #    By: sdurr <sdurr@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/11/10 10:41:23 by sdurr             #+#    #+#              #
-#    Updated: 2015/03/22 13:52:19 by sdurr            ###   ########.fr        #
+#    Updated: 2015/03/22 17:09:44 by karakhirn        ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -26,6 +26,9 @@ SRCS = 		ft_isascii.s \
 			ft_puts.s \
 			ft_memset.s \
 			ft_memcpy.s \
+			ft_strcat.s \
+			ft_strdup.s \
+			ft_cat.s \
 
 OBJS 	= 	$(SRCS:.s=.o)
 
@@ -34,18 +37,21 @@ RM 		= 	rm -rf
 all : $(NAME)
 
 $(NAME) :
-				nasm -f macho64 ft_isascii.s
-				nasm -f macho64 ft_tolower.s
-				nasm -f macho64 ft_toupper.s
-				nasm -f macho64 ft_isprint.s
-				nasm -f macho64 ft_isalnum.s
-				nasm -f macho64 ft_isalpha.s
-				nasm -f macho64 ft_isdigit.s
-				nasm -f macho64 ft_bzero.s
-				nasm -f macho64 ft_strlen.s
-				nasm -f macho64 ft_puts.s
-				nasm -f macho64 ft_memset.s
-				nasm -f macho64 ft_memcpy.s
+				nasm -f elf64 ft_isascii.s
+				nasm -f elf64 ft_tolower.s
+				nasm -f elf64 ft_toupper.s
+				nasm -f elf64 ft_isprint.s
+				nasm -f elf64 ft_isalnum.s
+				nasm -f elf64 ft_isalpha.s
+				nasm -f elf64 ft_isdigit.s
+				nasm -f elf64 ft_bzero.s
+				nasm -f elf64 ft_strlen.s
+				nasm -f elf64 ft_puts.s
+				nasm -f elf64 ft_memset.s
+				nasm -f elf64 ft_memcpy.s
+				nasm -f elf64 ft_strcat.s
+				nasm -f elf64 ft_strdup.s
+				nasm -f elf64 ft_cat.s
 				ar rc $(NAME) $(OBJS)
 				ranlib $(NAME)
 

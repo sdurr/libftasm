@@ -6,13 +6,13 @@
 ;    By: sdurr <sdurr@student.42.fr>                +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
 ;    Created: 2015/03/22 10:37:33 by sdurr             #+#    #+#              ;
-;    Updated: 2015/03/22 13:05:59 by sdurr            ###   ########.fr        ;
+;    Updated: 2015/03/22 14:17:03 by karakhirn        ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
 
-global _ft_puts
+global ft_puts
 
-extern _ft_strlen
+extern ft_strlen
 
 section .data
 not:
@@ -21,10 +21,10 @@ not:
 
 section .text
 
-_ft_puts:
+ft_puts:
 	cmp rdi, 0
 	je null
-	call _ft_strlen
+	call ft_strlen
 	mov rdx, rax
 	syscall
 	mov rax, 0x2000004

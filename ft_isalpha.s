@@ -6,13 +6,13 @@
 ;    By: sdurr <sdurr@student.42.fr>                +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
 ;    Created: 2015/03/22 09:27:45 by sdurr             #+#    #+#              ;
-;    Updated: 2015/03/22 09:44:04 by sdurr            ###   ########.fr        ;
+;    Updated: 2015/03/22 14:15:30 by karakhirn        ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
 
-global _ft_isalpha
+global ft_isalpha
 
-_ft_isalpha:
+ft_isalpha:
 	push rbp
 	mov rax, 0
 	cmp rdi, 65

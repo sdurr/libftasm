@@ -6,15 +6,15 @@
 ;    By: sdurr <sdurr@student.42.fr>                +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
 ;    Created: 2015/03/20 16:22:07 by sdurr             #+#    #+#              ;
-;    Updated: 2015/03/21 18:20:38 by sdurr            ###   ########.fr        ;
+;    Updated: 2015/03/22 14:16:01 by karakhirn        ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
 
-global _ft_isdigit
+global ft_isdigit
 
 section .text
 
-_ft_isdigit:
+ft_isdigit:
 	push rbp
 	mov rax, 0
 	cmp rdi, 48

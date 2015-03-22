@@ -4,15 +4,15 @@
 ;    By: sdurr <sdurr@student.42.fr>                +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
 ;    Created: 2015/03/20 09:59:52 by sdurr             #+#    #+#              ;
-;    Updated: 2015/03/22 10:36:07 by sdurr            ###   ########.fr        ;
+;    Updated: 2015/03/22 14:17:17 by karakhirn        ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
 
-global _ft_strlen
+global ft_strlen
 
 section .text
 
-_ft_strlen:
+ft_strlen:
 	cmp rdi, 0
 	je end
 	mov rbx, rdi

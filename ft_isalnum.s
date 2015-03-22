@@ -6,13 +6,13 @@
 ;    By: sdurr <sdurr@student.42.fr>                +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
 ;    Created: 2015/03/20 14:33:01 by sdurr             #+#    #+#              ;
-;    Updated: 2015/03/22 09:57:54 by sdurr            ###   ########.fr        ;
+;    Updated: 2015/03/22 14:15:06 by karakhirn        ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
 
-global _ft_isalnum
+global ft_isalnum
 
-_ft_isalnum:
+ft_isalnum:
 	push rbp
 	mov rax, 0
 	cmp rdi, 122

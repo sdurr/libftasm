@@ -6,7 +6,7 @@
 /*   By: sdurr <sdurr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/20 09:25:23 by sdurr             #+#    #+#             */
-/*   Updated: 2015/03/22 13:28:38 by sdurr            ###   ########.fr       */
+/*   Updated: 2015/03/22 16:41:05 by karakhirn        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@
 int main()
 {
 	void *d;
+	void *src;
 
-	d = (void *)strdup("dddddd");
-	printf("ft = %s\n", (char *)ft_memset(d, 'a', 3));
-	printf("src = %s\n", memset(d, 3, 'a'));
+	printf("ft = %s\n", ft_strdup("test_dup"));
+	printf("src = %s\n", strdup("test_strdup"));
 	return (0);
 }

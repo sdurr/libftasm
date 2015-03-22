@@ -6,15 +6,15 @@
 ;    By: sdurr <sdurr@student.42.fr>                +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
 ;    Created: 2015/03/20 13:50:34 by sdurr             #+#    #+#              ;
-;    Updated: 2015/03/20 14:32:40 by sdurr            ###   ########.fr        ;
+;    Updated: 2015/03/22 14:15:47 by karakhirn        ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
 
-global _ft_isascii
+global ft_isascii
 
 section .text
 
-_ft_isascii:
+ft_isascii:
 	push rbp
 	mov rax, 0
 	cmp rdi, 127

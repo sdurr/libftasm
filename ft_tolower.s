@@ -6,13 +6,13 @@
 ;    By: sdurr <sdurr@student.42.fr>                +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
 ;    Created: 2015/03/21 18:30:07 by sdurr             #+#    #+#              ;
-;    Updated: 2015/03/22 09:27:01 by sdurr            ###   ########.fr        ;
+;    Updated: 2015/03/22 14:17:30 by karakhirn        ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
 
-global _ft_tolower
+global ft_tolower
 
-_ft_tolower:
+ft_tolower:
 	push rbp
 	mov rax, rdi
 	cmp rdi, 65
