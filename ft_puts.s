@@ -6,7 +6,7 @@
 ;    By: sdurr <sdurr@student.42.fr>                +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
 ;    Created: 2015/03/22 10:37:33 by sdurr             #+#    #+#              ;
-;    Updated: 2015/03/22 11:32:32 by sdurr            ###   ########.fr        ;
+;    Updated: 2015/03/22 13:05:59 by sdurr            ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
 
@@ -16,7 +16,7 @@ extern _ft_strlen
 
 section .data
 not:
-	.string_null	db "(null)", 10
+	.string_null	db "(null)"
 	.newline	db 0x0a
 
 section .text
@@ -37,11 +37,10 @@ null:
 	syscall
 	mov rax, 0x2000004
 	lea rsi , [rel not.string_null]
-	mov rdx, 16
+	mov rdx, 6
 	mov rdi, 1
 	syscall
-	mov rax, 10
-	ret
+	jmp end
 
 end:
 	syscall
