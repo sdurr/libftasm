@@ -6,7 +6,7 @@
 #    By: sdurr <sdurr@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/11/10 10:41:23 by sdurr             #+#    #+#              #
-#    Updated: 2015/03/21 18:32:40 by sdurr            ###   ########.fr        #
+#    Updated: 2015/03/22 11:36:34 by sdurr            ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -16,9 +16,15 @@ CPATH = ./srcs/
 
 SRCS = 		ft_isascii.s \
 			ft_isalnum.s \
+			ft_isalpha.s \
 			ft_isdigit.s \
 			ft_isprint.s \
 			ft_tolower.s \
+			ft_toupper.s \
+			ft_bzero.s \
+			ft_strlen.s \
+			ft_puts.s \
+			ft_memset.s \
 
 OBJS 	= 	$(SRCS:.s=.o)
 
@@ -29,9 +35,15 @@ all : $(NAME)
 $(NAME) :
 				nasm -f macho64 ft_isascii.s
 				nasm -f macho64 ft_tolower.s
+				nasm -f macho64 ft_toupper.s
 				nasm -f macho64 ft_isprint.s
 				nasm -f macho64 ft_isalnum.s
+				nasm -f macho64 ft_isalpha.s
 				nasm -f macho64 ft_isdigit.s
+				nasm -f macho64 ft_bzero.s
+				nasm -f macho64 ft_strlen.s
+				nasm -f macho64 ft_puts.s
+				nasm -f macho64 ft_memset.s
 				ar rc $(NAME) $(OBJS)
 				ranlib $(NAME)
 

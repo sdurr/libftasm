@@ -4,7 +4,7 @@
 ;    By: sdurr <sdurr@student.42.fr>                +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
 ;    Created: 2015/03/20 09:59:52 by sdurr             #+#    #+#              ;
-;    Updated: 2015/03/20 13:48:46 by sdurr            ###   ########.fr        ;
+;    Updated: 2015/03/22 10:36:07 by sdurr            ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
 
@@ -13,19 +13,17 @@ global _ft_strlen
 section .text
 
 _ft_strlen:
-	push rbp
-	mov rax, 1
-	mov rbp, rdi
-	jmp loop
+	cmp rdi, 0
+	je end
+	mov rbx, rdi
+	mov rax, 0
 
 loop:
-	cmp rbp, 0
+	cmp byte[rbx], 0
 	je end
+	inc rbx
 	inc rax
-	inc rbp
-	push rbp
 	jmp loop
 
 end:
-	pop rbp
 	ret

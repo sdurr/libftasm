@@ -1,38 +1,32 @@
 ;******************************************************************************;
 ;                                                                              ;
 ;                                                         :::      ::::::::    ;
-;    ft_tolower.s                                       :+:      :+:    :+:    ;
+;    ft_bzero.s                                         :+:      :+:    :+:    ;
 ;                                                     +:+ +:+         +:+      ;
 ;    By: sdurr <sdurr@student.42.fr>                +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
-;    Created: 2015/03/21 18:30:07 by sdurr             #+#    #+#              ;
-;    Updated: 2015/03/22 09:27:01 by sdurr            ###   ########.fr        ;
+;    Created: 2015/03/22 09:58:44 by sdurr             #+#    #+#              ;
+;    Updated: 2015/03/22 10:22:56 by sdurr            ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
 
-global _ft_tolower
+global _ft_bzero
 
-_ft_tolower:
-	push rbp
-	mov rax, rdi
-	cmp rdi, 65
-	jb tolo
-	cmp rdi, 90
-	ja tolo
-	add rax, 32
+section .text
 
-tolo:
-	cmp rax, 65
-	je tmp
-	cmp rax, 77
-	je tmp
-	cmp rax, 90
-	je tmp
-	jmp end
+_ft_bzero:
+	cmp rdi, 0
+	je end
+	mov rbx, rdi
+	mov rax, rsi
 
-tmp:
-	add rax, 32
-	jmp end
+loop:
+	cmp rax, 0
+	je end
+	mov byte[rbx], 0
+	inc rbx
+	dec rax
+	jmp loop
+
 end:
-	pop rbp
 	ret

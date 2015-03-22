@@ -1,38 +1,22 @@
 ;******************************************************************************;
 ;                                                                              ;
 ;                                                         :::      ::::::::    ;
-;    ft_tolower.s                                       :+:      :+:    :+:    ;
+;    ft_memset.s                                        :+:      :+:    :+:    ;
 ;                                                     +:+ +:+         +:+      ;
 ;    By: sdurr <sdurr@student.42.fr>                +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
-;    Created: 2015/03/21 18:30:07 by sdurr             #+#    #+#              ;
-;    Updated: 2015/03/22 09:27:01 by sdurr            ###   ########.fr        ;
+;    Created: 2015/03/22 11:35:29 by sdurr             #+#    #+#              ;
+;    Updated: 2015/03/22 11:38:40 by sdurr            ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
 
-global _ft_tolower
+global _ft_memset
 
-_ft_tolower:
-	push rbp
-	mov rax, rdi
-	cmp rdi, 65
-	jb tolo
-	cmp rdi, 90
-	ja tolo
-	add rax, 32
+section .text
 
-tolo:
-	cmp rax, 65
-	je tmp
-	cmp rax, 77
-	je tmp
-	cmp rax, 90
-	je tmp
-	jmp end
+_ft_memset:
+	cmp rdi, 0
+	ja end
 
-tmp:
-	add rax, 32
-	jmp end
 end:
-	pop rbp
 	ret

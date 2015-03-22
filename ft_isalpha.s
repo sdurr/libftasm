@@ -1,38 +1,48 @@
 ;******************************************************************************;
 ;                                                                              ;
 ;                                                         :::      ::::::::    ;
-;    ft_tolower.s                                       :+:      :+:    :+:    ;
+;    ft_isalpha.s                                       :+:      :+:    :+:    ;
 ;                                                     +:+ +:+         +:+      ;
 ;    By: sdurr <sdurr@student.42.fr>                +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
-;    Created: 2015/03/21 18:30:07 by sdurr             #+#    #+#              ;
-;    Updated: 2015/03/22 09:27:01 by sdurr            ###   ########.fr        ;
+;    Created: 2015/03/22 09:27:45 by sdurr             #+#    #+#              ;
+;    Updated: 2015/03/22 09:44:04 by sdurr            ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
 
-global _ft_tolower
+global _ft_isalpha
 
-_ft_tolower:
+_ft_isalpha:
 	push rbp
-	mov rax, rdi
+	mov rax, 0
 	cmp rdi, 65
-	jb tolo
+	jb test
+	inc rax
 	cmp rdi, 90
-	ja tolo
-	add rax, 32
+	ja test
+	inc rax
+	cmp rdi, 97
+	jb test
+	inc rax
+	cmp rdi, 122
+	ja test
+	inc rax
 
-tolo:
-	cmp rax, 65
-	je tmp
-	cmp rax, 77
-	je tmp
-	cmp rax, 90
-	je tmp
+test:
+	cmp rdi, 97
+	je end
+	cmp rdi, 109
+	je end
+	cmp rdi, 122
+	je end
+	cmp rax, 2
+	je rt
+	mov rax, 0
 	jmp end
 
-tmp:
-	add rax, 32
-	jmp end
+rt:
+	dec rax
+
 end:
 	pop rbp
 	ret
