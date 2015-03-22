@@ -6,7 +6,7 @@
 /*   By: sdurr <sdurr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/20 14:24:13 by sdurr             #+#    #+#             */
-/*   Updated: 2015/03/22 11:37:22 by sdurr            ###   ########.fr       */
+/*   Updated: 2015/03/22 13:53:37 by sdurr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,5 @@ void		ft_bzero(void *s, size_t n);
 size_t		ft_strlen(char *s);
 int			ft_puts(const char *s);
 void		*ft_memset(void *b, int c, size_t len);
+void		*ft_memcpy(void *dst, const void *src, size_t n);
 #endif

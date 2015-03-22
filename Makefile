@@ -6,7 +6,7 @@
 #    By: sdurr <sdurr@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/11/10 10:41:23 by sdurr             #+#    #+#              #
-#    Updated: 2015/03/22 11:36:34 by sdurr            ###   ########.fr        #
+#    Updated: 2015/03/22 13:52:19 by sdurr            ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -25,6 +25,7 @@ SRCS = 		ft_isascii.s \
 			ft_strlen.s \
 			ft_puts.s \
 			ft_memset.s \
+			ft_memcpy.s \
 
 OBJS 	= 	$(SRCS:.s=.o)
 
@@ -44,6 +45,7 @@ $(NAME) :
 				nasm -f macho64 ft_strlen.s
 				nasm -f macho64 ft_puts.s
 				nasm -f macho64 ft_memset.s
+				nasm -f macho64 ft_memcpy.s
 				ar rc $(NAME) $(OBJS)
 				ranlib $(NAME)
 
