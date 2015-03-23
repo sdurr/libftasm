@@ -6,7 +6,7 @@
 /*   By: sdurr <sdurr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/20 09:25:23 by sdurr             #+#    #+#             */
-/*   Updated: 2015/03/23 10:39:20 by sdurr            ###   ########.fr       */
+/*   Updated: 2015/03/23 11:40:39 by sdurr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,13 @@ int main()
 	int fd;
 
 	fd = open("test", O_RDONLY);
-	ft_cat(fd);
+	ft_cat(0);
 
-	printf("ft = %d\n", ft_puts(NULL));
+/*	printf("ft = %d\n", ft_puts(NULL));
 	printf("ft = %d\n", ft_puts("test_dup"));
 	printf("ft = %d\n", ft_puts("test_dup"));
 	printf("ft = %d\n", ft_puts("test_dup"));
-
+*/
 //	printf("src = %d\n", puts("test_strdup"));
 	return (0);
 }
