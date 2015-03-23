@@ -1,18 +1,18 @@
 ;******************************************************************************;
 ;                                                                              ;
 ;                                                         :::      ::::::::    ;
-;    ft_tolower.s                                       :+:      :+:    :+:    ;
+;    _ft_tolower.s                                       :+:      :+:    :+:    ;
 ;                                                     +:+ +:+         +:+      ;
-;    By: sdurr <sdurr@student.42.fr>                +#+  +:+       +#+         ;
+;    By: sdurr <sdurr@student.42._fr>                +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
 ;    Created: 2015/03/21 18:30:07 by sdurr             #+#    #+#              ;
-;    Updated: 2015/03/22 14:17:30 by karakhirn        ###   ########.fr        ;
+;    Updated: 2015/03/23 08:45:13 by sdurr            ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
 
-global ft_tolower
+global _ft_tolower
 
-ft_tolower:
+_ft_tolower:
 	push rbp
 	mov rax, rdi
 	cmp rdi, 65

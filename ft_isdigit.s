@@ -1,20 +1,20 @@
 ;******************************************************************************;
 ;                                                                              ;
 ;                                                         :::      ::::::::    ;
-;    ft_isdigit.s                                       :+:      :+:    :+:    ;
+;    _ft_isdigit.s                                       :+:      :+:    :+:    ;
 ;                                                     +:+ +:+         +:+      ;
-;    By: sdurr <sdurr@student.42.fr>                +#+  +:+       +#+         ;
+;    By: sdurr <sdurr@student.42._fr>                +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
 ;    Created: 2015/03/20 16:22:07 by sdurr             #+#    #+#              ;
-;    Updated: 2015/03/22 14:16:01 by karakhirn        ###   ########.fr        ;
+;    Updated: 2015/03/23 08:43:12 by sdurr            ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
 
-global ft_isdigit
+global _ft_isdigit
 
 section .text
 
-ft_isdigit:
+_ft_isdigit:
 	push rbp
 	mov rax, 0
 	cmp rdi, 48

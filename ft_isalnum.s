@@ -1,18 +1,18 @@
 ;******************************************************************************;
 ;                                                                              ;
 ;                                                         :::      ::::::::    ;
-;    ft_isalnum.s                                       :+:      :+:    :+:    ;
+;    _ft_isalnum.s                                       :+:      :+:    :+:    ;
 ;                                                     +:+ +:+         +:+      ;
-;    By: sdurr <sdurr@student.42.fr>                +#+  +:+       +#+         ;
+;    By: sdurr <sdurr@student.42._fr>                +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
 ;    Created: 2015/03/20 14:33:01 by sdurr             #+#    #+#              ;
-;    Updated: 2015/03/22 14:15:06 by karakhirn        ###   ########.fr        ;
+;    Updated: 2015/03/23 08:41:49 by sdurr            ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
 
-global ft_isalnum
+global _ft_isalnum
 
-ft_isalnum:
+_ft_isalnum:
 	push rbp
 	mov rax, 0
 	cmp rdi, 122

@@ -1,12 +1,24 @@
-global ft_strcat
+;******************************************************************************;
+;                                                                              ;
+;                                                         :::      ::::::::    ;
+;    ft_strcat.s                                        :+:      :+:    :+:    ;
+;                                                     +:+ +:+         +:+      ;
+;    By: sdurr <sdurr@student.42.fr>                +#+  +:+       +#+         ;
+;                                                 +#+#+#+#+#+   +#+            ;
+;    Created: 2015/03/23 08:44:13 by sdurr             #+#    #+#              ;
+;    Updated: 2015/03/23 08:44:36 by sdurr            ###   ########.fr        ;
+;                                                                              ;
+;******************************************************************************;
 
-extern ft_strlen
-	
+global _ft_strcat
+
+extern _ft_strlen
+
 section .text
-	
-ft_strcat:
+
+_ft_strcat:
 	push rdi
-	call ft_strlen
+	call _ft_strlen
 	cld
 	rep movsb
 

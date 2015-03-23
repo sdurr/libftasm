@@ -6,7 +6,7 @@
 #    By: sdurr <sdurr@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/11/10 10:41:23 by sdurr             #+#    #+#              #
-#    Updated: 2015/03/22 17:09:44 by karakhirn        ###   ########.fr        #
+#    Updated: 2015/03/23 08:41:00 by sdurr            ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -37,21 +37,21 @@ RM 		= 	rm -rf
 all : $(NAME)
 
 $(NAME) :
-				nasm -f elf64 ft_isascii.s
-				nasm -f elf64 ft_tolower.s
-				nasm -f elf64 ft_toupper.s
-				nasm -f elf64 ft_isprint.s
-				nasm -f elf64 ft_isalnum.s
-				nasm -f elf64 ft_isalpha.s
-				nasm -f elf64 ft_isdigit.s
-				nasm -f elf64 ft_bzero.s
-				nasm -f elf64 ft_strlen.s
-				nasm -f elf64 ft_puts.s
-				nasm -f elf64 ft_memset.s
-				nasm -f elf64 ft_memcpy.s
-				nasm -f elf64 ft_strcat.s
-				nasm -f elf64 ft_strdup.s
-				nasm -f elf64 ft_cat.s
+				nasm -f macho64 ft_isascii.s
+				nasm -f macho64 ft_tolower.s
+				nasm -f macho64 ft_toupper.s
+				nasm -f macho64 ft_isprint.s
+				nasm -f macho64 ft_isalnum.s
+				nasm -f macho64 ft_isalpha.s
+				nasm -f macho64 ft_isdigit.s
+				nasm -f macho64 ft_bzero.s
+				nasm -f macho64 ft_strlen.s
+				nasm -f macho64 ft_puts.s
+				nasm -f macho64 ft_memset.s
+				nasm -f macho64 ft_memcpy.s
+				nasm -f macho64 ft_strcat.s
+				nasm -f macho64 ft_strdup.s
+				nasm -f macho64 ft_cat.s
 				ar rc $(NAME) $(OBJS)
 				ranlib $(NAME)
 

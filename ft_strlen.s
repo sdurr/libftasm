@@ -1,18 +1,18 @@
 ;                                                         :::      ::::::::    ;
-;    ft_strlen.s                                        :+:      :+:    :+:    ;
+;    _ft_strlen.s                                        :+:      :+:    :+:    ;
 ;                                                     +:+ +:+         +:+      ;
-;    By: sdurr <sdurr@student.42.fr>                +#+  +:+       +#+         ;
+;    By: sdurr <sdurr@student.42._fr>                +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
 ;    Created: 2015/03/20 09:59:52 by sdurr             #+#    #+#              ;
-;    Updated: 2015/03/22 14:17:17 by karakhirn        ###   ########.fr        ;
+;    Updated: 2015/03/23 08:41:17 by sdurr            ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
 
-global ft_strlen
+global _ft_strlen
 
 section .text
 
-ft_strlen:
+_ft_strlen:
 	cmp rdi, 0
 	je end
 	mov rbx, rdi

@@ -1,32 +1,29 @@
 ;******************************************************************************;
 ;                                                                              ;
 ;                                                         :::      ::::::::    ;
-;    ft_puts.s                                          :+:      :+:    :+:    ;
+;    _ft_puts.s                                          :+:      :+:    :+:    ;
 ;                                                     +:+ +:+         +:+      ;
-;    By: sdurr <sdurr@student.42.fr>                +#+  +:+       +#+         ;
+;    By: sdurr <sdurr@student.42._fr>                +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
 ;    Created: 2015/03/22 10:37:33 by sdurr             #+#    #+#              ;
-;    Updated: 2015/03/22 14:17:03 by karakhirn        ###   ########.fr        ;
+;    Updated: 2015/03/23 09:25:53 by sdurr            ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
 
-global ft_puts
+global _ft_puts
 
-extern ft_strlen
+extern _ft_strlen
 
 section .data
-not:
-	.string_null	db "(null)"
-	.newline	db 0x0a
+string_null:	db "(null)", 10
 
 section .text
 
-ft_puts:
+_ft_puts:
 	cmp rdi, 0
 	je null
-	call ft_strlen
+	call _ft_strlen
 	mov rdx, rax
-	syscall
 	mov rax, 0x2000004
 	mov rsi, rdi
 	mov rdi, 1
@@ -34,19 +31,17 @@ ft_puts:
 	jmp end
 
 null:
-	syscall
-	mov rax, 0x2000004
-	lea rsi , [rel not.string_null]
 	mov rdx, 6
+	mov rax, 0x2000004
+	lea rsi, [rel string_null]
 	mov rdi, 1
 	syscall
 	jmp end
 
 end:
-	syscall
 	mov rdx, 1
 	mov rax, 0x2000004
-	lea rsi, [rel not.newline]
+	lea rsi, [rel string_null + 6]
 	syscall
 	mov rax, 10
 	ret

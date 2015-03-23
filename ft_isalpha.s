@@ -1,18 +1,18 @@
 ;******************************************************************************;
 ;                                                                              ;
 ;                                                         :::      ::::::::    ;
-;    ft_isalpha.s                                       :+:      :+:    :+:    ;
+;    _ft_isalpha.s                                       :+:      :+:    :+:    ;
 ;                                                     +:+ +:+         +:+      ;
-;    By: sdurr <sdurr@student.42.fr>                +#+  +:+       +#+         ;
+;    By: sdurr <sdurr@student.42._fr>                +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
 ;    Created: 2015/03/22 09:27:45 by sdurr             #+#    #+#              ;
-;    Updated: 2015/03/22 14:15:30 by karakhirn        ###   ########.fr        ;
+;    Updated: 2015/03/23 08:42:39 by sdurr            ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
 
-global ft_isalpha
+global _ft_isalpha
 
-ft_isalpha:
+_ft_isalpha:
 	push rbp
 	mov rax, 0
 	cmp rdi, 65

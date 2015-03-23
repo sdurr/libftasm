@@ -1,23 +1,34 @@
-global ft_cat
+;******************************************************************************;
+;                                                                              ;
+;                                                         :::      ::::::::    ;
+;    ft_cat.s                                           :+:      :+:    :+:    ;
+;                                                     +:+ +:+         +:+      ;
+;    By: sdurr <sdurr@student.42.fr>                +#+  +:+       +#+         ;
+;                                                 +#+#+#+#+#+   +#+            ;
+;    Created: 2015/03/23 08:41:58 by sdurr             #+#    #+#              ;
+;    Updated: 2015/03/23 10:53:04 by sdurr            ###   ########.fr        ;
+;                                                                              ;
+;******************************************************************************;
 
-extern ft_strlen
-extern ft_puts
-	
+global _ft_cat
+
+extern _ft_strlen
+extern _ft_puts
+extern _printf
+
 section .data
-buf:	
-	.buf_size db 600
-
+buffer:  times 20 db 0
 section .text
-	
-ft_cat:
-	syscall
+
+_ft_cat:
 	mov rax, 0x2000003
-	mov rsi, rdi
-	lea rdi, [rel buf.buf_size]
+	mov rbx, rdi
+	lea rcx, [rel buffer]
+	mov rdx, 18
 	syscall
-	push rdi
-	call ft_puts
-	rep rcx
-	
+	push rcx
+	cmp rax, 1
+	jb end
+	pop rcx
+
 end:
-	ret

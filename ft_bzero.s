@@ -1,20 +1,20 @@
 ;******************************************************************************;
 ;                                                                              ;
 ;                                                         :::      ::::::::    ;
-;    ft_bzero.s                                         :+:      :+:    :+:    ;
+;    _ft_bzero.s                                         :+:      :+:    :+:    ;
 ;                                                     +:+ +:+         +:+      ;
-;    By: sdurr <sdurr@student.42.fr>                +#+  +:+       +#+         ;
+;    By: sdurr <sdurr@student.42._fr>                +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
 ;    Created: 2015/03/22 09:58:44 by sdurr             #+#    #+#              ;
-;    Updated: 2015/03/22 14:14:33 by karakhirn        ###   ########.fr        ;
+;    Updated: 2015/03/23 08:41:30 by sdurr            ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
 
-global ft_bzero
+global _ft_bzero
 
 section .text
 
-ft_bzero:
+_ft_bzero:
 	cmp rdi, 0
 	je end
 	mov rbx, rdi

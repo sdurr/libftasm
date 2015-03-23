@@ -1,20 +1,20 @@
 ;******************************************************************************;
 ;                                                                              ;
 ;                                                         :::      ::::::::    ;
-;    ft_memset.s                                        :+:      :+:    :+:    ;
+;    _ft_memset.s                                        :+:      :+:    :+:    ;
 ;                                                     +:+ +:+         +:+      ;
-;    By: sdurr <sdurr@student.42.fr>                +#+  +:+       +#+         ;
+;    By: sdurr <sdurr@student.42._fr>                +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
 ;    Created: 2015/03/22 11:35:29 by sdurr             #+#    #+#              ;
-;    Updated: 2015/03/22 16:18:17 by karakhirn        ###   ########.fr        ;
+;    Updated: 2015/03/23 08:43:50 by sdurr            ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
 
-global ft_memset
+global _ft_memset
 
 section .text
 
-ft_memset:
+_ft_memset:
 	push rdi
 	cmp rdi, 0
 	je end

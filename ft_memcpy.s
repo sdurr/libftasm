@@ -1,20 +1,20 @@
 ;******************************************************************************;
 ;                                                                              ;
 ;                                                         :::      ::::::::    ;
-;    ft_memcpy.s                                        :+:      :+:    :+:    ;
+;    _ft_memcpy.s                                        :+:      :+:    :+:    ;
 ;                                                     +:+ +:+         +:+      ;
-;    By: sdurr <sdurr@student.42.fr>                +#+  +:+       +#+         ;
+;    By: sdurr <sdurr@student.42._fr>                +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
 ;    Created: 2015/03/22 13:50:10 by sdurr             #+#    #+#              ;
-;    Updated: 2015/03/22 16:24:15 by karakhirn        ###   ########.fr        ;
+;    Updated: 2015/03/23 08:43:38 by sdurr            ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
 
-global ft_memcpy
+global _ft_memcpy
 
 section .text
 
-ft_memcpy:
+_ft_memcpy:
 	push rdi
 	cmp rdi, 0
 	je end
@@ -22,7 +22,7 @@ ft_memcpy:
 	mov rax, rsi
 	cld
 	rep movsb
-	
+
 end:
 	pop rax
 	ret

@@ -1,18 +1,18 @@
 ;******************************************************************************;
 ;                                                                              ;
 ;                                                         :::      ::::::::    ;
-;    ft_isprint.s                                       :+:      :+:    :+:    ;
+;    _ft_isprint.s                                       :+:      :+:    :+:    ;
 ;                                                     +:+ +:+         +:+      ;
-;    By: sdurr <sdurr@student.42.fr>                +#+  +:+       +#+         ;
+;    By: sdurr <sdurr@student.42._fr>                +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
 ;    Created: 2015/03/21 18:24:07 by sdurr             #+#    #+#              ;
-;    Updated: 2015/03/22 14:16:18 by karakhirn        ###   ########.fr        ;
+;    Updated: 2015/03/23 08:43:25 by sdurr            ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
 
-global ft_isprint
+global _ft_isprint
 
-ft_isprint:
+_ft_isprint:
 	push rbp
 	mov rax, 0
 	cmp rdi, 32

@@ -1,18 +1,18 @@
 ;******************************************************************************;
 ;                                                                              ;
 ;                                                         :::      ::::::::    ;
-;    ft_toupper.s                                       :+:      :+:    :+:    ;
+;    _ft_toupper.s                                       :+:      :+:    :+:    ;
 ;                                                     +:+ +:+         +:+      ;
-;    By: sdurr <sdurr@student.42.fr>                +#+  +:+       +#+         ;
+;    By: sdurr <sdurr@student.42._fr>                +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
 ;    Created: 2015/03/21 18:53:29 by sdurr             #+#    #+#              ;
-;    Updated: 2015/03/22 14:17:43 by karakhirn        ###   ########.fr        ;
+;    Updated: 2015/03/23 08:45:25 by sdurr            ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
 
-global ft_toupper
+global _ft_toupper
 
-ft_toupper:
+_ft_toupper:
 	push rbp
 	mov rax, rdi
 	cmp rdi, 90

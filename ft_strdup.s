@@ -1,13 +1,25 @@
-global ft_strdup
+;******************************************************************************;
+;                                                                              ;
+;                                                         :::      ::::::::    ;
+;    ft_strdup.s                                        :+:      :+:    :+:    ;
+;                                                     +:+ +:+         +:+      ;
+;    By: sdurr <sdurr@student.42.fr>                +#+  +:+       +#+         ;
+;                                                 +#+#+#+#+#+   +#+            ;
+;    Created: 2015/03/23 08:44:46 by sdurr             #+#    #+#              ;
+;    Updated: 2015/03/23 08:44:56 by sdurr            ###   ########.fr        ;
+;                                                                              ;
+;******************************************************************************;
+
+global _ft_strdup
 
 extern malloc
-extern ft_strlen
-extern ft_memcpy
+extern _ft_strlen
+extern _ft_memcpy
 
-ft_strdup:
+_ft_strdup:
 	push rbp
 	push rdi
-	call ft_strlen
+	call _ft_strlen
 	push rax
 	pop rdi
 	call malloc
