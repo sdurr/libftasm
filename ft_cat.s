@@ -6,7 +6,7 @@
 ;    By: sdurr <sdurr@student.42.fr>                +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
 ;    Created: 2015/03/23 08:41:58 by sdurr             #+#    #+#              ;
-;    Updated: 2015/03/23 10:56:45 by sdurr            ###   ########.fr        ;
+;    Updated: 2015/03/23 16:50:24 by sdurr            ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
 
@@ -16,15 +16,16 @@ extern _ft_strlen
 extern _ft_puts
 extern _printf
 
-section .data
-buffer:  times 20 db 0
+section .bss
+buffer resb 15
+
 section .text
 
 _ft_cat:
 	mov rax, 0x2000003
 	mov rbx, rdi
 	lea rcx, [rel buffer]
-	mov rdx, 1
+	mov rdx, 15
 	syscall
 	push rcx
 	call _ft_puts

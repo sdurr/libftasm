@@ -1,35 +1,29 @@
 ;******************************************************************************;
 ;                                                                              ;
 ;                                                         :::      ::::::::    ;
-;    ft_strdup.s                                        :+:      :+:    :+:    ;
+;    ft_strnew.s                                        :+:      :+:    :+:    ;
 ;                                                     +:+ +:+         +:+      ;
 ;    By: sdurr <sdurr@student.42.fr>                +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
-;    Created: 2015/03/23 08:44:46 by sdurr             #+#    #+#              ;
-;    Updated: 2015/03/23 17:17:16 by sdurr            ###   ########.fr        ;
+;    Created: 2015/03/23 16:51:37 by sdurr             #+#    #+#              ;
+;    Updated: 2015/03/23 16:56:37 by sdurr            ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
 
-global _ft_strdup
+global _ft_strnew
 
 extern _malloc
-extern _ft_strlen
-extern _ft_memcpy
+
 section .text
 
-_ft_strdup:
-	push rbp
+_ft_strnew:
 	cmp rdi, 0
-	je end
+	push rbp
 	push rdi
-	call _ft_strlen
-	inc rax
-	push rax
-	pop rdi
 	call _malloc
-	mov rbp, rdi
-	pop rax
+	mov byte[rbp], 0
+	cld
+	rep stosb
 
 end:
-	pop rbp
 	ret

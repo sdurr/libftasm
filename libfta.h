@@ -6,7 +6,7 @@
 /*   By: sdurr <sdurr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/20 14:24:13 by sdurr             #+#    #+#             */
-/*   Updated: 2015/03/22 16:58:41 by karakhirn        ###   ########.fr       */
+/*   Updated: 2015/03/23 16:53:03 by sdurr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,7 @@ void		*ft_memset(void *b, int c, size_t len);
 void		*ft_memcpy(void *dst, const void *src, size_t n);
 char		*ft_strcat(char *dest, const char *src);
 char		*ft_strdup(const char *s);
+char		*ft_strnew(int c);
+
 void		ft_cat(int fd);
 #endif
