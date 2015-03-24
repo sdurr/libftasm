@@ -6,7 +6,7 @@
 ;    By: sdurr <sdurr@student.42.fr>                +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
 ;    Created: 2015/03/23 08:44:13 by sdurr             #+#    #+#              ;
-;    Updated: 2015/03/23 08:44:36 by sdurr            ###   ########.fr        ;
+;    Updated: 2015/03/24 16:20:05 by sdurr            ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
 
@@ -17,8 +17,9 @@ extern _ft_strlen
 section .text
 
 _ft_strcat:
-	push rdi
+	push rsi
 	call _ft_strlen
+	jmp end_dest
 	cld
 	rep movsb
 

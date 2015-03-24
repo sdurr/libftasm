@@ -6,7 +6,7 @@
 ;    By: sdurr <sdurr@student.42.fr>                +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
 ;    Created: 2015/03/23 08:44:46 by sdurr             #+#    #+#              ;
-;    Updated: 2015/03/24 11:39:57 by sdurr            ###   ########.fr        ;
+;    Updated: 2015/03/24 16:02:41 by sdurr            ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
 
@@ -16,31 +16,31 @@ extern _malloc
 extern _ft_strlen
 extern _ft_memcpy
 extern _ft_bzero
-extern _strcpy
+extern _ft_puts
 
 section .text
 
 _ft_strdup:
 	push rdi
-	mov rax, 0
 	call _ft_strlen
-	pop rdi
-	mov rcx, rax
-	inc rax
 	push rax
-	call _malloc
-	pop rdx
-	mov rcx, 0
-
-copy:
-	mov bl, byte[rdi]
-	push bx
-	mov byte[rax], bl
-	inc rax
+	mov rdi, rax
 	inc rdi
-	pop bx
-	test bl, bl
-	jz copy
+	push rdi
+	call _malloc
+	pop rdi
+	mov rdi, rax
+	pop rcx
+	pop rsi
+	push rdi
+	push rsi
+	push rcx
+	call _ft_memcpy
+	pop rdi
+	pop rcx
+	pop rsi
+	ret
 
 end:
+	mov rax, 0
 	ret
