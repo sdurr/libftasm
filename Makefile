@@ -6,7 +6,7 @@
 #    By: sdurr <sdurr@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/11/10 10:41:23 by sdurr             #+#    #+#              #
-#    Updated: 2015/03/23 16:58:19 by sdurr            ###   ########.fr        #
+#    Updated: 2015/03/25 13:47:54 by sdurr            ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -24,6 +24,7 @@ SRCS = 		ft_isascii.s \
 			ft_bzero.s \
 			ft_strlen.s \
 			ft_puts.s \
+			ft_putchar.s \
 			ft_memset.s \
 			ft_memcpy.s \
 			ft_strcat.s \
@@ -48,6 +49,7 @@ $(NAME) :
 				nasm -f macho64 ft_bzero.s
 				nasm -f macho64 ft_strlen.s
 				nasm -f macho64 ft_puts.s
+				nasm -f macho64 ft_putchar.s
 				nasm -f macho64 ft_memset.s
 				nasm -f macho64 ft_memcpy.s
 				nasm -f macho64 ft_strcat.s

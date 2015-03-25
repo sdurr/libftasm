@@ -6,7 +6,7 @@
 /*   By: sdurr <sdurr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/20 09:25:23 by sdurr             #+#    #+#             */
-/*   Updated: 2015/03/24 16:19:14 by sdurr            ###   ########.fr       */
+/*   Updated: 2015/03/25 18:00:52 by sdurr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,9 @@
 
 int main()
 {
-	void *d;
-	void *src;
-	int fd;
-	char *test_new;
-
-	test_new = strdup("    dddddd ");
-	//printf("%s>", memcpy(test_new, "ddddddddddf", 100));
-	ft_puts(ft_strcat(test_new, "adda"));
-	ft_puts("\n");
-	//ft_puts(strcat(test_new, "adda"));
+//	fd = open(__FILE__, O_RDONLY);
+//	ft_cat(fd);
+	ft_cat(0);
+//	printf("\n%s\n",ft_strcat(tet, tets));
 	return (0);
 }

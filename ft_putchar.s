@@ -1,43 +1,43 @@
 ;******************************************************************************;
 ;                                                                              ;
 ;                                                         :::      ::::::::    ;
-;    ft_strcat.s                                        :+:      :+:    :+:    ;
+;    _ft_puts.s                                          :+:      :+:    :+:    ;
 ;                                                     +:+ +:+         +:+      ;
-;    By: sdurr <sdurr@student.42.fr>                +#+  +:+       +#+         ;
+;    By: sdurr <sdurr@student.42._fr>                +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
-;    Created: 2015/03/23 08:44:13 by sdurr             #+#    #+#              ;
-;    Updated: 2015/03/25 15:54:00 by sdurr            ###   ########.fr        ;
+;    Created: 2015/03/22 10:37:33 by sdurr             #+#    #+#              ;
+;    Updated: 2015/03/25 14:00:10 by sdurr            ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
 
-global _ft_strcat
+global _ft_putchar
 
 extern _ft_strlen
-extern _ft_memcpy
-extern _ft_bzero
+
+section .data
+string_null:	db "(null)", 10
 
 section .text
 
-_ft_strcat:
-	push rdi
+_ft_putchar:
+	cmp rdi, 0
+	je null
 	call _ft_strlen
-	mov r8, rax
-	push rsi
-	call _ft_strlen
-	mov r10, rax
-	pop rsi
-	pop rdi
+	mov rdx, rax
+	mov rax, 0x2000004
+	mov rsi, rdi
+	mov rdi, 1
+	syscall
+	jmp end
 
-loop:
-	cmp r10, 0
-	je end
-	mov [rdi + r8], rsi
-	inc rsi
-	inc r8
-	dec r10
-	jmp loop
+null:
+	mov rdx, 6
+	mov rax, 0x2000004
+	lea rsi, [rel string_null]
+	mov rdi, 1
+	syscall
+	jmp end
 
 end:
-	mov byte[rdi + r8], 0
-	mov rax, rdi
+	mov rax, 10
 	ret
