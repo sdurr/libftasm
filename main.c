@@ -6,7 +6,7 @@
 /*   By: sdurr <sdurr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/20 09:25:23 by sdurr             #+#    #+#             */
-/*   Updated: 2015/03/25 18:00:52 by sdurr            ###   ########.fr       */
+/*   Updated: 2015/03/26 09:42:56 by sdurr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,12 @@
 
 int main()
 {
+	char *test;
+
+	test = ft_strdup("ddd");
 //	fd = open(__FILE__, O_RDONLY);
 //	ft_cat(fd);
-	ft_cat(0);
-//	printf("\n%s\n",ft_strcat(tet, tets));
+//	ft_cat(0);
+	ft_puts(ft_strcat(test, "123"));
 	return (0);
 }
