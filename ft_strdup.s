@@ -6,7 +6,7 @@
 ;    By: sdurr <sdurr@student.42.fr>                +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
 ;    Created: 2015/03/23 08:44:46 by sdurr             #+#    #+#              ;
-;    Updated: 2015/03/26 12:19:45 by sdurr            ###   ########.fr        ;
+;    Updated: 2015/06/01 14:36:42 by sdurr            ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
 
@@ -14,7 +14,7 @@ global _ft_strdup
 
 extern _malloc
 extern _ft_strlen
-extern _ft_strcat
+extern _ft_memcpy
 extern _ft_bzero
 extern _ft_puts
 
@@ -35,7 +35,7 @@ _ft_strdup:
 	push rdi
 	push rsi
 	push rcx
-	call _ft_strcat
+	call _ft_memcpy
 	pop rcx						;rdi = len
 	pop rsi
 	pop rdi
